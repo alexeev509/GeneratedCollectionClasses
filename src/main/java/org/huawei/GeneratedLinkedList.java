@@ -4,7 +4,7 @@ import java.util.Collection;
 
 public class GeneratedLinkedList<E> {
 
-    private Object[] elementData;
+    private Object[] elementData = new Object[100];
     private int size = 0;
 
     public GeneratedLinkedList() {
@@ -23,7 +23,7 @@ public class GeneratedLinkedList<E> {
     public boolean add(E e) {
         System.out.println("------THIS IS IMPLEMENTATION OF THE MINE \"add\" method of the \"LinkedList\" class");
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-        //System.out.println("It was invoked in the class: " + stackTrace[3].getClassName());
+        System.out.println("It was invoked in the class: " + stackTrace[3].getClassName());
 
         //I want to increment Integer value for test's in class "LinkedListTest";
         if ("LinkedListTest".equals(stackTrace[3].getClassName())) {
@@ -32,5 +32,14 @@ public class GeneratedLinkedList<E> {
 
         elementData[size++] = e;
         return true;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public E get(int index) {
+        System.out.println("GET GENERATED");
+        return (E) elementData[index];
     }
 }
