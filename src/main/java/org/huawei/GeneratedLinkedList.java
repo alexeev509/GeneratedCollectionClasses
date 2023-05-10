@@ -5,7 +5,7 @@ import java.util.*;
 public class GeneratedLinkedList<E> extends AbstractSequentialList<E>
         implements List<E>, Deque<E>, Cloneable, java.io.Serializable {
 
-    private ArrayList<E> arrayList = new ArrayList<>();
+    private LinkedList<E> list = new LinkedList<>();
     int size = 0;
 
     public GeneratedLinkedList() {
@@ -16,84 +16,98 @@ public class GeneratedLinkedList<E> extends AbstractSequentialList<E>
         System.out.println("GeneratedLinkedList(Collection<? extends E> c)");
         Object[] objects = c.toArray();
         for (int i = 0; i < objects.length; i++) {
-            arrayList.add((E) objects[i]);
+            list.add((E) objects[i]);
         }
     }
 
     @Override
     public void addFirst(E e) {
-
+        System.out.println("Generated addFirst(E e)");
+        list.addFirst(e);
     }
 
     @Override
     public void addLast(E e) {
-
+        System.out.println("Generated addLast(E e)");
+        list.addLast(e);
     }
 
     @Override
     public boolean offerFirst(E e) {
-        return false;
+        System.out.println("Generated offerFirst(E e)");
+        return list.offerFirst(e);
     }
 
     @Override
     public boolean offerLast(E e) {
-        return false;
+        System.out.println("Generated offerLast(E e)");
+        return list.offerLast(e);
     }
 
     @Override
     public E removeFirst() {
-        return null;
+        System.out.println("Generated removeFirst()");
+        return list.removeFirst();
     }
 
     @Override
     public E removeLast() {
-        return null;
+        System.out.println("Generated removeLast()");
+        return list.removeLast();
     }
 
     public E remove(int index) {
         System.out.println("Generated remove(int index)");
-        E elem = arrayList.remove(index);
+        E elem = list.remove(index);
         return elem;
     }
 
     @Override
     public E pollFirst() {
-        return null;
+        System.out.println("Generated pollFirst()");
+        return list.pollFirst();
     }
 
     @Override
     public E pollLast() {
-        return null;
+        System.out.println("Generated pollLast()");
+        return list.pollLast();
     }
 
     @Override
     public E getFirst() {
-        return null;
+        System.out.println("Generated getFirst()");
+        return list.getFirst();
     }
 
     @Override
     public E getLast() {
-        return null;
+        System.out.println("Generated getLast()");
+        return list.getLast();
     }
 
     @Override
     public E peekFirst() {
-        return null;
+        System.out.println("Generated peekFirst()");
+        return list.peekFirst();
     }
 
     @Override
     public E peekLast() {
-        return null;
+        System.out.println("Generated peekLast()");
+        return list.peekLast();
     }
 
     @Override
     public boolean removeFirstOccurrence(Object o) {
-        return false;
+        System.out.println("Generated removeFirstOccurrence(Object o)");
+        return list.removeFirstOccurrence(o);
     }
 
     @Override
     public boolean removeLastOccurrence(Object o) {
-        return false;
+        System.out.println("Generated removeLastOccurrence(Object o)");
+        return list.removeLastOccurrence(o);
     }
 
     @Override
@@ -107,63 +121,77 @@ public class GeneratedLinkedList<E> extends AbstractSequentialList<E>
 //            System.out.println("NOW WE WERE ENTERED IN THE TEST CASE IN CLASS \"LinkedListTest\"");
 //        }
         System.out.println("Generated add(E e)");
-        arrayList.add(e);
-        return true;
+        return list.add(e);
     }
 
     @Override
     public boolean offer(E e) {
-        return false;
+        System.out.println("Generated offer(E e)");
+        return list.offer(e);
     }
 
     @Override
     public E remove() {
-        return null;
+        System.out.println("Generated remove()");
+        return list.remove();
     }
 
     @Override
     public E poll() {
-        return null;
+        System.out.println("Generated poll()");
+        return list.poll();
     }
 
     @Override
     public E element() {
-        return null;
+        System.out.println("Generated element()");
+        return list.element();
     }
 
     @Override
     public E peek() {
-        return null;
+        System.out.println("Generated peek()");
+        return list.peek();
     }
 
     @Override
     public void push(E e) {
-
+        System.out.println("Generated push(E e)");
+        list.push(e);
     }
 
     @Override
     public E pop() {
-        return null;
+        System.out.println("Generated pop()");
+        return list.pop();
     }
 
     @Override
     public int size() {
-        return arrayList.size();
+        System.out.println("Generated size()");
+        return list.size();
     }
 
     @Override
     public Iterator<E> descendingIterator() {
-        return null;
+        System.out.println("Generated descendingIterator()");
+        return list.descendingIterator();
     }
 
     @Override
     public E get(int index) {
         System.out.println("GET GENERATED");
-        return (E) arrayList.get(index);
+        return list.get(index);
     }
 
     @Override
     public ListIterator<E> listIterator(int index) {
-        return null;
+        System.out.println("Generated listIterator(int index)");
+        return list.listIterator(index);
+    }
+
+    public boolean addAll(Collection<? extends E> c){
+        System.out.println("Generated addAll(Collection<? extends E> c)");
+        return list.addAll(c);
     }
 }

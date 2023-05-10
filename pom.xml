@@ -30,4 +30,15 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy-dep -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-dep</artifactId>
+            <version>1.14.4</version>
+        </dependency>
+
+
+    </dependencies>
+
 </project>
